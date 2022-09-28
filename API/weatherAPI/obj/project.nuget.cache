@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YZOt3490TNpVNLW/tRd2HqlV2pdBRjcFEQ4CfFo4A8nTPPShyYJaWcFItTEhOGEu4jlPhc0XDkHJNsflV+yxAQ==",
+  "dgSpecHash": "lLMBeYX9fBcj4TP74IBOGbD+06GMFlkBN8vSogWocc9J9FcjrzqfAX1Lt11pO3491RcLWHsEUh9RAwYI2pFSFA==",
   "success": true,
-  "projectFilePath": "D:\\Oriol\\Programacio\\Prova_tecnica_OHTIC\\.NET API\\weatherOnMountain\\weatherAPI\\weatherAPI.csproj",
+  "projectFilePath": "D:\\Oriol\\Programacio\\Prova_tecnica_OHTIC\\API\\weatherAPI\\weatherAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Oriol\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Oriol\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

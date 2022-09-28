@@ -2194,11 +2194,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Oriol\\Programacio\\Prova_tecnica_OHTIC\\.NET API\\weatherOnMountain\\weatherAPI\\weatherAPI.csproj",
+      "projectUniqueName": "D:\\Oriol\\Programacio\\Prova_tecnica_OHTIC\\API\\weatherAPI\\weatherAPI.csproj",
       "projectName": "weatherAPI",
-      "projectPath": "D:\\Oriol\\Programacio\\Prova_tecnica_OHTIC\\.NET API\\weatherOnMountain\\weatherAPI\\weatherAPI.csproj",
+      "projectPath": "D:\\Oriol\\Programacio\\Prova_tecnica_OHTIC\\API\\weatherAPI\\weatherAPI.csproj",
       "packagesPath": "C:\\Users\\Oriol\\.nuget\\packages\\",
-      "outputPath": "D:\\Oriol\\Programacio\\Prova_tecnica_OHTIC\\.NET API\\weatherOnMountain\\weatherAPI\\obj\\",
+      "outputPath": "D:\\Oriol\\Programacio\\Prova_tecnica_OHTIC\\API\\weatherAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Oriol\\AppData\\Roaming\\NuGet\\NuGet.Config",

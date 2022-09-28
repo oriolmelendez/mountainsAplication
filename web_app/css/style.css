@@ -1,3 +1,7 @@
+.hide {
+    display: none;
+}
+
 .navbar-brand {
     width: 7vh;
     display: flex;
@@ -17,12 +21,62 @@
 }
 
 .mountain-image {
-    width: 80%;
+    width: 100%;
 }
 
 .mountains-list {
     display: grid;
-    gap: 1rem;
+    gap: 10rem;
     grid-auto-rows: 22rem;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.card {
+    align-items: center;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.information-button {
+    margin-bottom: 3%;
+    width: 50%;
+    background-color: #f6c500;
+    border-color: #f6c500;
+    color: black;
+}
+
+.back-button {
+    width: 2rem;
+}
+
+.div-image {
+    position: relative;
+    width: 80%;
+    margin: 5% 10% 2% 10%;
+}
+
+.information-image {
+    display: block;
+    width: 100%;
+}
+
+.information-container {
+    margin: 3vh 10vh 10vh 10vh;
+}
+
+.information-text {
+    margin: 1% 0 0 10%;
+    width: 100%;
+}
+
+.mountain-name {
+    font-weight: bold;
+    font-size: 5vw;
+}
+
+.mountain-text {
+    margin-top: 3%;
+    font-size: 1.5vw;
 }
