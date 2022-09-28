@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div id="addAction">
+    <div id="editAction">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand"><img class="icon" src="../img/mountainIcon.png"></a>
@@ -40,7 +40,30 @@
                 </div>
             </div>
         </nav>
-        <div class="addMountain-form">
+        <div id="list-mountains">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Region</th>
+                        <th scope="col">Height</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody v-for="mountain in listMountains">
+                    <tr>
+                        <td>{{mountain.name}}</td>
+                        <td>{{mountain.region}}</td>
+                        <td>{{mountain.height}}</td>
+                        <td v-on:click="displayEditMenu(mountain.id)"><img src="../img/pencil-square.svg"></td>
+                        <td v-on:click="deleteItem(mountain.id)"><img src="../img/trash3-fill.svg"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="editMountain-form" class="editMountain-form hide">
+            <img src="../img/backspace.svg" v-on:click="goBack()" class="back-button">
             <div class="form-group">
                 <label>Name</label>
                 <input type="text" class="form-control" id="name" placeholder="Enter mountain name">
@@ -61,10 +84,14 @@
                 <label>Altitude</label>
                 <input type="text" class="form-control" id="altitude" placeholder="Altitude where is situated">
             </div>
-            <button class="btn btn-primary" v-on:click="doRequest()">Add new mountain</button>
+            <div class="form-group hide">
+                <label>Id</label>
+                <input type="text" class="form-control" id="id">
+            </div>
+            <button class="btn btn-primary" v-on:click="updateInformation()">Edit information</button>
         </div>
     </div>
-    <script src="../js/addAction.js"></script>
+    <script src="../js/editAction.js"></script>
 </body>
 
 </html>

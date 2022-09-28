@@ -3,11 +3,7 @@ let app = new Vue({
     data: {
         dataForm: {}
     },
-    mounted: function() {
-
-        _self = this;
-
-    },
+    mounted: function() {},
     methods: {
         doRequest: function() {
 
@@ -34,9 +30,6 @@ let app = new Vue({
                 body: data,
                 redirect: 'follow'
             };
-
-            console.log(data);
-            console.log(requestOptions);
 
             fetch("https://localhost:7163/api/Mountain", requestOptions)
                 .then(response => response.text())
