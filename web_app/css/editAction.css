@@ -1,0 +1,32 @@
+.list-mountains {
+    margin: 3vh 10vh 10vh 10vh;
+}
+
+.reload-button {
+    margin: 3% 30% 0 30%;
+    background-color: #f6c500;
+    border-color: #f6c500;
+    color: black;
+    width: 40%;
+}
+
+.editMountain-form {
+    margin: 3vh 10vh 10vh 10vh;
+    overflow: hidden;
+}
+
+.editMountain-form::-webkit-scrollbar {
+    display: none;
+}
+
+.form-group {
+    margin-top: 2%;
+}
+
+.edit-button {
+    margin: 2% 30% 0 30%;
+    background-color: #f6c500;
+    border-color: #f6c500;
+    color: black;
+    width: 40%;
+}

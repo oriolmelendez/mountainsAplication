@@ -1,11 +1,14 @@
 let app = new Vue({
     el: '#addAction',
     data: {
-        dataForm: {}
+        dataForm: {},
+        responseData: {}
     },
     mounted: function() {},
     methods: {
         doRequest: function() {
+
+            var _self = this;
 
             var name = document.getElementById('name').value;
             var region = document.getElementById('region').value;
@@ -33,7 +36,9 @@ let app = new Vue({
 
             fetch("https://localhost:7163/api/Mountain", requestOptions)
                 .then(response => response.text())
-                .then(result => console.log(result))
+                .then(result => function() {
+                    _self.responseData = result;
+                })
                 .catch(error => console.log(error));
         }
     }

@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/addAction.css">
     <title>Mountains of Catalonia</title>
 </head>
 
@@ -32,9 +33,6 @@
                                 <li><a class="dropdown-item" href="addAction.html">Add new mountain</a></li>
                                 <li><a class="dropdown-item" href="editAction.html">Edit mountain</a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Weather on top</a>
                         </li>
                     </ul>
                 </div>
@@ -61,7 +59,7 @@
                 <label>Altitude</label>
                 <input type="text" class="form-control" id="altitude" placeholder="Altitude where is situated">
             </div>
-            <button class="btn btn-primary" v-on:click="doRequest()">Add new mountain</button>
+            <button class="btn btn-primary add-button" v-on:click="doRequest()">Add new mountain</button>
         </div>
     </div>
     <script src="../js/addAction.js"></script>

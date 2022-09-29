@@ -3,7 +3,6 @@ let app = new Vue({
     data: {
         mountains: [],
         mountainInformation: {},
-        displayPop: 'false'
     },
     mounted: function() {
 
@@ -11,7 +10,6 @@ let app = new Vue({
 
         var mountainsData = _self.getAllMountains();
         mountainsData.then((data) => {
-            localStorage.setItem('mountainsData', JSON.stringify(data));
             _self.mountains = data;
         });
     },
@@ -33,7 +31,7 @@ let app = new Vue({
 
             });
         },
-        getMountainInformation: function(id) {
+        displayMountainInformation: function(id) {
 
             var _self = this;
 
@@ -43,10 +41,29 @@ let app = new Vue({
             var htmlSinglePage = document.getElementById('information-mountain');
             htmlSinglePage.classList.remove('hide');
 
-            _self.mountains.forEach(element => {
-                if (element.id == id) {
-                    _self.mountainInformation = element;
-                }
+            var mountainInfo = _self.getMountainInformation(id);
+            mountainInfo.then((data) => {
+                _self.mountainInformation = data;
+            });
+
+
+
+        },
+        getMountainInformation: function(id) {
+
+            return new Promise((resolve, reject) => {
+
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        resolve(JSON.parse(xhttp.responseText));
+                    } else if (this.readyState == 4 && this.status != 200) {
+                        reject({});
+                    }
+                };
+                xhttp.open("GET", "https://localhost:7163/api/Mountain/" + id, true);
+                xhttp.send();
+
             });
 
         },
@@ -56,5 +73,16 @@ let app = new Vue({
             var htmlList = document.getElementById('list-mountains');
             htmlList.classList.remove('hide');
         }
+    },
+    watch: {
+
+        mountains: function() {
+            var _self = this;
+
+            _self.mountains.forEach(element => {
+                console.log(element);
+            });
+        }
+
     }
 });

@@ -26,7 +26,7 @@ namespace weatherAPI.Controllers
             var dbMountain = await _dataContext.MountainsCat.FindAsync(id);
             if (dbMountain == null)
             {
-                return BadRequest("Cim no trobat.");
+                return BadRequest("Mountain not found.");
             }
 
             return Ok(dbMountain);
@@ -37,7 +37,12 @@ namespace weatherAPI.Controllers
         {
             _dataContext.MountainsCat.Add(mountain);
             await _dataContext.SaveChangesAsync();
-            return Ok(await _dataContext.MountainsCat.ToListAsync());
+            var dbMountain = await _dataContext.MountainsCat.FindAsync(mountain.Id);
+            if (dbMountain == null)
+            {
+                return BadRequest("Mountain not found.");
+            }
+            return Ok(dbMountain);
         }
 
         [HttpPut]
@@ -46,7 +51,7 @@ namespace weatherAPI.Controllers
             var dbMountain = await _dataContext.MountainsCat.FindAsync(requestData.Id);
             if (dbMountain == null)
             {
-                return BadRequest("Cim no trobat.");
+                return BadRequest("Mountain not found.");
             }
 
             dbMountain.Name = requestData.Name;
@@ -66,7 +71,7 @@ namespace weatherAPI.Controllers
             var dbMountain = await _dataContext.MountainsCat.FindAsync(id);
             if (dbMountain == null)
             {
-                return BadRequest("Cim no trobat.");
+                return BadRequest("Mountain not found.");
             }
 
             _dataContext.MountainsCat.Remove(dbMountain);

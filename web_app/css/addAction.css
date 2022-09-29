@@ -1,0 +1,12 @@
+.addMountain-form {
+    margin: 3vh 10vh 10vh 10vh;
+    overflow: hidden;
+}
+
+.add-button {
+    margin: 2% 35% 0 35%;
+    background-color: #f6c500;
+    border-color: #f6c500;
+    color: black;
+    width: 30%;
+}
